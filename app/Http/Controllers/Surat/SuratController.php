@@ -8,6 +8,12 @@ class SuratController extends Controller
 {
      public function index()
     {
+				$surat= Surat::get();
+        return view('surat.index', compact('surat'));
+		}
+		public function edit()
+    {
+
         return view('surat.surat_masuk');
     }
     public function store()
